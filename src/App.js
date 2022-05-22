@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useColorMode, Switch } from "@chakra-ui/react";
+import React, { Component } from "react";
+import BaseItems from "./base/BaseItems";
+import TypeTest from "./mainTypeTest/TypeTest";
+import ChooseTopic from "./typeTopics/ChooseTopic";
 function App() {
+  const { toggleColorMode } = useColorMode();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <Switch
+          right={2}
+          top={2}
+          position={"absolute"}
+          onChange={toggleColorMode}
+        />
+        <BaseItems />
+      </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<TypeTest />} />
+          <Route path="/ChooseTopic" element={<ChooseTopic />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
