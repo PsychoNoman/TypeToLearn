@@ -1,27 +1,31 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useColorMode, Switch } from "@chakra-ui/react";
-import React, { Component } from "react";
+import React from "react";
 import BaseItems from "./base/BaseItems";
 import TypeTest from "./mainTypeTest/TypeTest";
 import ChooseTopic from "./typeTopics/ChooseTopic";
-function App() {
-  const { toggleColorMode } = useColorMode();
+import CustomType from "./CustomType";
+import Classroom from "./classroom/Classroom";
 
+function App() {
   return (
     <>
-      <div className="App">
-        <Switch
-          right={2}
-          top={2}
-          position={"absolute"}
-          onChange={toggleColorMode}
-        />
-        <BaseItems />
-      </div>
+      <div className="App"></div>
       <Router>
         <Routes>
           <Route path="/" element={<TypeTest />} />
-          <Route path="/ChooseTopic" element={<ChooseTopic />} />
+          <Route path="/choosetopic" element={<ChooseTopic />} />
+          <Route path="/customtype" element={<CustomType />} />
+          <Route path="/classroom" element={<Classroom />} />
+          {/* typeTopics */}
+          {/* <Route path="/choosetopic" element={<ChooseTopic />} />
+          <Route path="/customtype" element={<CustomType />} />
+          <Route path="/classroom" element={<Classroom />} />
+          <Route path="/choosetopic" element={<ChooseTopic />} />
+          <Route path="/customtype" element={<CustomType />} />
+          <Route path="/classroom" element={<Classroom />} />
+          <Route path="/choosetopic" element={<ChooseTopic />} />
+          <Route path="/customtype" element={<CustomType />} /> */}
+          <BaseItems />
         </Routes>
       </Router>
     </>

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-
+// import React, { useState, useEffect } from "react";
+// console.log(data);
 export default () => {
-  const [fact, setFact] = useState(null);
+  // const [fact, setFact] = useState(null);
 
   // const getFact = () => {
   //   fetch("https://asli-fun-fact-api.herokuapp.com/")

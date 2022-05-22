@@ -1,6 +1,8 @@
 import { Flex, IconButton } from "@chakra-ui/react";
 import React, { useState } from "react";
 import NavItem from "./NavItem";
+import { useColorMode, Switch } from "@chakra-ui/react";
+
 // import { PhoneIcon, AddIcon, WarningIcon } from '@chakra-ui/icons'
 import {
   FiMenu,
@@ -13,9 +15,17 @@ import { Link } from "react-router-dom";
 
 function BaseItems() {
   const [navSize, changeNavSize] = useState("large");
+  const { toggleColorMode } = useColorMode();
 
   return (
     <div className="BaseItems">
+      <Switch
+        right={2}
+        top={2}
+        position={"absolute"}
+        onChange={toggleColorMode}
+      />
+
       <Flex
         pos="fixed"
         left="5"

@@ -8,6 +8,8 @@ import {
   MenuButton,
   MenuList,
 } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
+
 // import NavHoverBox from "./NavHoverBox";
 
 export default function NavItem({ icon, title, description, active, navSize }) {
@@ -24,6 +26,7 @@ export default function NavItem({ icon, title, description, active, navSize }) {
           p={3}
           borderRadius={8}
           _hover={{ textDecor: "none", backgroundColor: "#AEC8CA" }}
+          as={RouterLink}
           w={navSize === "large" && "100%"}
         >
           <MenuButton w="100%">

@@ -3,6 +3,7 @@ import Preview from "./Preview";
 import Speed from "./Speed";
 import getText from "./getText";
 import { Textarea, Button, Center, Box } from "@chakra-ui/react";
+import BaseItems from "../base/BaseItems";
 
 const initialState = {
   text: getText(),
