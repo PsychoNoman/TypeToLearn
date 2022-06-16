@@ -1,19 +1,12 @@
 import React, { Component } from "react";
-import Preview from "./mainTypeTest/Preview";
-import Speed from "./mainTypeTest/Speed";
-import CustomTypeBase from "./CustomTypeText";
+import Preview from "../../mainTypeTest/Preview";
+import Speed from "../../mainTypeTest/Speed";
+import GetTextRandom from "../../mainTypeTest/getTextTopics/GetTextRandom";
 import { Textarea, Button, Center, Box, Text } from "@chakra-ui/react";
 
-let awdawdwawdawdawdawd = document.getElementById("awdawdwawdawdawdawd");
-// let aetatetae = document.getElementById("pasteText");
-
-// aetatetae.addEventListener("input", (e) => {
-//   awdawdwawdawdawdawd.textContent = e.target.value;
-// });
-
 const initialState = {
-  // CustonTypeBase,
-  text: CustomTypeBase(),
+  GetTextRandom,
+  text: GetTextRandom(),
   userInput: "",
   symbols: 0,
   sec: 0,
@@ -21,7 +14,7 @@ const initialState = {
   finished: false,
 };
 
-class CustomType extends Component {
+class RandomType extends Component {
   state = initialState;
 
   onRestart = () => {
@@ -80,21 +73,7 @@ class CustomType extends Component {
         >
           <div className="row">
             <div className="col-md-6 offset-md-3">
-              <Text style={{ fontSize: "30px" }}>Custom Type</Text>
-              <span id="awdawdwawdawdawdawd">awd</span>
-
-              <Textarea
-                w={"700px"}
-                placeholder="Copy and paste text that you want to type up and understand."
-                type="text"
-                id="pasteText"
-                onChange={(e) => {
-                  awdawdwawdawdawdawd.textContent = e.target.value;
-                }}
-
-                // value={text}
-                // onChange={(e) => setText(e.target.value)}
-              ></Textarea>
+              <Text style={{ fontSize: "30px" }}>Random Facts</Text>
 
               <Text>
                 <Preview
@@ -103,19 +82,24 @@ class CustomType extends Component {
                 />
               </Text>
               <Textarea
-                padding={"10px"}
+                padding={"3px"}
                 value={this.state.userInput}
                 onChange={this.onUserInputChange}
                 className="form-control mb-3"
                 placeholder="Start typing..."
                 readOnly={this.state.finished}
               ></Textarea>
-
               <Speed sec={this.state.sec} symbols={this.state.symbols} />
               <div className="text-right">
-                {/* <Text color={"red"}>Check you have everything correct</Text> */}
+                <Text color={"red"}>Check you have everything correct</Text>
                 <Button className="btn btn-light" onClick={this.onRestart}>
                   Restart
+                </Button>
+                <Button
+                  marginLeft={"10px"}
+                  onClick={() => window.location.reload(false)}
+                >
+                  Get New Text
                 </Button>
               </div>
             </div>
@@ -126,4 +110,4 @@ class CustomType extends Component {
   }
 }
 
-export default CustomType;
+export default RandomType;

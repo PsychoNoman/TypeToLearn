@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import Preview from "./Preview";
 import Speed from "./Speed";
 import getText from "./getText";
-import { Textarea, Button, Center, Box } from "@chakra-ui/react";
-import BaseItems from "../base/BaseItems";
+import { Textarea, Button, Center, Box, Text } from "@chakra-ui/react";
 
 const initialState = {
   text: getText(),
@@ -64,20 +63,25 @@ class TypeTest extends Component {
       <Box>
         <Center
           style={{
-            width: "800px",
+            width: "700px",
             position: "fixed",
-            right: "200px",
+            right: "150px",
             top: "90px",
           }}
           className="container mt-5 mb-5"
         >
           <div className="row">
             <div className="col-md-6 offset-md-3">
-              <Preview
-                text={this.state.text}
-                userInput={this.state.userInput}
-              />
+              <Text style={{ fontSize: "30px" }}>Type To Learn</Text>
+
+              <Text>
+                <Preview
+                  text={this.state.text}
+                  userInput={this.state.userInput}
+                />
+              </Text>
               <Textarea
+                padding={"3px"}
                 value={this.state.userInput}
                 onChange={this.onUserInputChange}
                 className="form-control mb-3"
@@ -86,6 +90,7 @@ class TypeTest extends Component {
               ></Textarea>
               <Speed sec={this.state.sec} symbols={this.state.symbols} />
               <div className="text-right">
+                <Text color={"red"}>Check you have everything correct</Text>
                 <Button className="btn btn-light" onClick={this.onRestart}>
                   Restart
                 </Button>

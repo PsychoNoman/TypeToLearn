@@ -22,3 +22,25 @@ export default (props) => {
     </div>
   );
 };
+// import React from "react";
+// import { Flex } from "@chakra-ui/react";
+
+// export default (props) => {
+//   const text = props.text.split("");
+
+//   return (
+//     <Flex userSelect="none" wrap="wrap">
+//       {text.map((s, i) => {
+//         let color;
+//         if (i < props.userInput.length) {
+//           color = s === props.userInput[i] ? "#dfffa0" : "#fcbea4";
+//         }
+//         return (
+//           <p key={i} style={{ backgroundColor: color }}>
+//             {s}
+//           </p>
+//         );
+//       })}
+//     </Flex>
+//   );
+// };
