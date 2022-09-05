@@ -98,7 +98,7 @@ function BaseItems({ children }) {
             mb={4}
           ></Flex>
         </Flex>
-        <div
+        {/* <div
           style={{
             id: "ad",
             width: "280px",
@@ -113,7 +113,7 @@ function BaseItems({ children }) {
             border: "solid",
             borderWidth: "2px",
           }}
-        ></div>
+        ></div> */}
         <Box>{children}</Box>
       </Grid>
     </VStack>

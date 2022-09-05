@@ -3,7 +3,12 @@ import React from "react";
 
 export default function Credits() {
   return (
-    <Text right={400} top={"50"} pos={"absolute"}>
+    <Text
+      position={"fixed"}
+      left={"50%"}
+      top={"20%"}
+      transform=" translate(-50%, -50%)"
+    >
       Credits for TypeTopics goes to <br />
       <Button
         p={1}

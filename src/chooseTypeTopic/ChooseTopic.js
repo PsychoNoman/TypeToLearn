@@ -1,17 +1,15 @@
 import React from "react";
-import { Box, Text, Center } from "@chakra-ui/react";
+import { Box, Text, Center, Flex } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 export default function choosetopic() {
   return (
     <>
-      <Center
-        display={"flex"}
+      <Flex
         flexWrap={"wrap"}
-        width={"1000px"}
+        width={"900px"}
+        marginLeft={"25%"}
+        marginTop={"10px"}
         className="container"
-        position={"absolute"}
-        right="10px"
-        top={"20px"}
       >
         <Link to={"/tcs"}>
           <Box
@@ -149,7 +147,7 @@ export default function choosetopic() {
             <br />
           </Box>
         </Link>
-      </Center>
+      </Flex>
     </>
   );
 }

@@ -60,16 +60,8 @@ class TypeTest extends Component {
 
   render() {
     return (
-      <Box>
-        <Center
-          style={{
-            width: "700px",
-            position: "fixed",
-            right: "150px",
-            top: "90px",
-          }}
-          className="container mt-5 mb-5"
-        >
+      <Box marginLeft={"300px"} marginTop={"100px"}>
+        <div style={{}} className="container mt-5 mb-5">
           <div className="row">
             <div className="col-md-6 offset-md-3">
               <Text style={{ fontSize: "30px" }}>Type To Learn</Text>
@@ -81,6 +73,7 @@ class TypeTest extends Component {
                 />
               </Text>
               <Textarea
+                width={"50rem"}
                 padding={"3px"}
                 value={this.state.userInput}
                 onChange={this.onUserInputChange}
@@ -97,7 +90,7 @@ class TypeTest extends Component {
               </div>
             </div>
           </div>
-        </Center>
+        </div>
       </Box>
     );
   }

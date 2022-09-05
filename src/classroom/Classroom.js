@@ -8,6 +8,7 @@ export default function Classroom() {
     <Center top={"100px"} right="300px" position={"absolute"}>
       probably won't continue this but maybe .. <br />
       <Button
+        userSelect={"all"}
         onClick={() => navigator.clipboard.writeText("defaccsuport@gmail.com")}
       >
         defaccsuport@gmail.com

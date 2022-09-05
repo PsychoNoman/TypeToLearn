@@ -1,19 +1,11 @@
 import React, { Component } from "react";
 import Preview from "./mainTypeTest/Preview";
 import Speed from "./mainTypeTest/Speed";
-import CustomTypeBase from "./CustomTypeText";
 import { Textarea, Button, Center, Box, Text } from "@chakra-ui/react";
-
-let awdawdwawdawdawdawd = document.getElementById("awdawdwawdawdawdawd");
-// let aetatetae = document.getElementById("pasteText");
-
-// aetatetae.addEventListener("input", (e) => {
-//   awdawdwawdawdawdawd.textContent = e.target.value;
-// });
 
 const initialState = {
   // CustonTypeBase,
-  text: CustomTypeBase(),
+  text: "This Doesnt Work Yet",
   userInput: "",
   symbols: 0,
   sec: 0,
@@ -81,20 +73,20 @@ class CustomType extends Component {
           <div className="row">
             <div className="col-md-6 offset-md-3">
               <Text style={{ fontSize: "30px" }}>Custom Type</Text>
-              <span id="awdawdwawdawdawdawd">awd</span>
 
               <Textarea
                 w={"700px"}
                 placeholder="Copy and paste text that you want to type up and understand."
                 type="text"
                 id="pasteText"
-                onChange={(e) => {
-                  awdawdwawdawdawdawd.textContent = e.target.value;
-                }}
+                onChange={(e) => {}}
 
                 // value={text}
                 // onChange={(e) => setText(e.target.value)}
               ></Textarea>
+              <Button padding={"10px"} marginTop={"10px"}>
+                Done
+              </Button>
 
               <Text>
                 <Preview

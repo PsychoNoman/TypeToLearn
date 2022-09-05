@@ -61,16 +61,8 @@ class RandomType extends Component {
 
   render() {
     return (
-      <Box>
-        <Center
-          style={{
-            width: "700px",
-            position: "fixed",
-            right: "150px",
-            top: "90px",
-          }}
-          className="container mt-5 mb-5"
-        >
+      <Box marginLeft={"300px"} marginTop={"100px"}>
+        <div>
           <div className="row">
             <div className="col-md-6 offset-md-3">
               <Text style={{ fontSize: "30px" }}>Random Facts</Text>
@@ -83,6 +75,7 @@ class RandomType extends Component {
               </Text>
               <Textarea
                 padding={"3px"}
+                width={"50rem"}
                 value={this.state.userInput}
                 onChange={this.onUserInputChange}
                 className="form-control mb-3"
@@ -104,7 +97,7 @@ class RandomType extends Component {
               </div>
             </div>
           </div>
-        </Center>
+        </div>
       </Box>
     );
   }
