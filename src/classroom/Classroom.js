@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function Classroom() {
   return (
-    <Center top={"100px"} right="300px" position={"absolute"}>
+    <Center marginLeft={"200px"} marginTop={"100px"}>
       probably won't continue this but maybe .. <br />
       <Button
         userSelect={"all"}

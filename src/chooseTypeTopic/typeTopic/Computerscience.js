@@ -61,8 +61,8 @@ class Computerscience extends Component {
 
   render() {
     return (
-      <Box>
-        <div marginLeft={"300px"} marginTop={"100px"}>
+      <Box marginLeft={"300px"} marginTop={"100px"}>
+        <div>
           <div className="row">
             <div className="col-md-6 offset-md-3">
               <Text style={{ fontSize: "30px" }}>Computer Science</Text>

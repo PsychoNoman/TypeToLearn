@@ -7,8 +7,8 @@ export default function choosetopic() {
       <Flex
         flexWrap={"wrap"}
         width={"900px"}
-        marginLeft={"25%"}
-        marginTop={"10px"}
+        marginLeft={"300px"}
+        marginTop={"100px"}
         className="container"
       >
         <Link to={"/tcs"}>
